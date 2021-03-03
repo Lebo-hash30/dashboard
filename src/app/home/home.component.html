@@ -1,0 +1,40 @@
+<div class="container">
+    <h2 style="color: green; text-align: center;">ADMIN DASHBOARD</h2>
+    <h5  style="color: green; text-align: center;">Smart Alerts App</h5>  
+    
+    
+    <table class="table admin-dashboard">
+      <thead>
+        <tr>
+          <th>Duration</th>
+          <th>Problem</th>
+          <th>Severity</th>
+          <th>Comment</th>
+          <th>Latitude</th>
+          <th>Longitude</th> 
+          <th>Status</th>
+          
+          
+        </tr>
+      </thead>
+
+      <tr  *ngFor="let problem of problems" style="color: green;">
+        <td>{{problem.time}}</td>
+        <td>{{problem.problemType}}</td>
+        <td>{{problem.severity}}</td>
+        <td>{{problem.comment}}</td>
+        <td>{{problem.latitude}}</td>
+        <td>{{problem.longitude}}</td>
+        
+        <div class="btn-group" role="group" aria-label="Basic example">
+      
+          <button type="button" class="btn btn-success" >RESOLVED</button>
+          <button type="button" class="btn btn-danger" >PENDING</button>
+
+        </div>
+      </tr>
+    </table>
+
+    
+  </div>
+  
